@@ -2,16 +2,9 @@ set nocompatible
 filetype off                  
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+
 Plugin 'VundleVim/Vundle.vim'
-
-Plugin 'itchyny/lightline.vim'
-
-
-
-
-
-
-
+Plugin 'valloric/youcompleteme'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -24,9 +17,9 @@ filetype plugin indent on    " required
 "Mode Settings
 
 " <------ CUSTOM CURSOR SETTINGS ------>
-let &t_SI.="\e[5 q" "SI = INSERT mode
-let &t_SR.="\e[4 q" "SR = REPLACE mode
-let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
+"let &t_SI.="\e[5 q" "SI = INSERT mode
+"let &t_SR.="\e[4 q" "SR = REPLACE mode
+"let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
 
 "  1 -> blinking block
 "  2 -> solid block 
@@ -36,6 +29,10 @@ let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
 "  6 -> solid vertical bar
 
 " <----- RELATIVE NUMBER -----> 
+" turn hybrid line numbers on
+:set number
+" :set nu rnu
+
 " turn hybrid line numbers on
 :set number relativenumber
 :set nu rnu
