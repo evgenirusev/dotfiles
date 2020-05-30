@@ -68,3 +68,4 @@ nnoremap <Leader>pt :NERDTreeToggle<Enter>
 nnoremap <silent> <Leader>pv :NERDTreeFind<CR>
 
 :nnoremap <Leader>v <c-v>
+

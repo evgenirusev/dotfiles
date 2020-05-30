@@ -138,6 +138,17 @@ alias bashrc="vim ~/.bashrc"
 
 [[ $TERM != "screen" ]] && exec tmux
 
-# function saveDotfiles() {
-#     
-# }
+function saveDotfiles() {
+   rm /mnt/c/Users/Evgeni/dev/dotfiles/.bashrc 
+   rm /mnt/c/Users/Evgeni/dev/dotfiles/.tmux.conf 
+   rm /mnt/c/Users/Evgeni/dev/dotfiles/.vimrc 
+
+   cp ~/.bashrc /mnt/c/Users/Evgeni/dev/dotfiles/.bashrc 
+   cp ~/.vimrc /mnt/c/Users/Evgeni/dev/dotfiles/.vimrc 
+   cp ~/.tmux.conf /mnt/c/Users/Evgeni/dev/dotfiles/.tmux.conf 
+
+   git --git-dir /mnt/c/Users/Evgeni/dev/dotfiles/.git status
+   git --git-dir /mnt/c/Users/Evgeni/dev/dotfiles/.git add .
+   git --git-dir /mnt/c/Users/Evgeni/dev/dotfiles/.git commit -m "update dotfiles"
+   git --git-dir /mnt/c/Users/Evgeni/dev/dotfiles/.git push
+}
