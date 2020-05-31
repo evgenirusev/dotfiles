@@ -123,7 +123,7 @@ alias a="git add ."
 alias r="git reset --hard"
 alias rc="git reset --soft HEAD^"
 alias cl="git clean -fdx"
-alias p="git pull"
+alias pu="git pull"
 alias po="git pull origin $*"
 alias pu="git push"
 alias cl="git clone $*"
@@ -135,6 +135,10 @@ alias vimrc="vim ~/.vimrc"
 alias dev="cd /mnt/c/Users/Evgeni/dev"
 alias cpr="cd /mnt/c/Users/Evgeni/dev/cp"
 alias bashrc="vim ~/.bashrc"
+alias tmuxconf="vim ~/.tmux.conf"
+alias dotfiles="cd /mnt/c/Users/Evgeni/dev/dotfiles"
+alias cmd="cmd.exe"
+alias delDir="rm -rf $*"
 
 [[ $TERM != "screen" ]] && exec tmux
 
@@ -164,4 +168,10 @@ function createMain() {
     echo "{" >> main.cpp
     echo "    std::cout << "Hello World!";" >> main.cpp
     echo "}" >> main.cpp
+}
+
+function gen() {
+    TMPFILE=`mktemp tmp.XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX` &&  echo $TMPFIL
+    git add .
+    git commit -m "add permutaiton"
 }

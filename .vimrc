@@ -1,24 +1,32 @@
-set nocompatible
+syntax on
 let mapleader=" "
 
 set ttimeoutlen=100
 call plug#begin('~/.vim/plugged')
-Plug 'kien/ctrlp.vim'
+"Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'epmatsw/ag.vim'
-Plug 'Valloric/YouCompleteMe'
-call plug#end()
-" <----- RELATIVE NUMBER -----> 
+Plug 'tpope/vim-fugitive'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
 " turn hybrid line numbers on
 set nu!
 set rnu
 
-" filetype plugin indent on
-set tabstop=4
-set shiftwidth=4
+set nocompatible
 set expandtab
+set tabstop=4 softtabstop=4
+set expandtab
+set smartindent
+set smartcase
+set scrolloff=8
+set shiftwidth=4
 set noswapfile
 set clipboard=unnamed
+set noshowmatch
+
+set cmdheight=2
+set updatetime=50
 " Delete without copying
 nnoremap <leader>d "_d
 xnoremap <leader>d "_d
@@ -68,4 +76,3 @@ nnoremap <Leader>pt :NERDTreeToggle<Enter>
 nnoremap <silent> <Leader>pv :NERDTreeFind<CR>
 
 :nnoremap <Leader>v <c-v>
-
