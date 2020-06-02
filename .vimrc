@@ -9,9 +9,6 @@ Plug 'epmatsw/ag.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-" turn hybrid line numbers on
-set nu!
-set rnu
 
 set nocompatible
 set expandtab
@@ -24,10 +21,14 @@ set shiftwidth=4
 set noswapfile
 set clipboard=unnamed
 set noshowmatch
+" turn hybrid line numbers on
+set nu!
+set rnu
 
 set cmdheight=2
 set updatetime=50
 " Delete without copying
+
 nnoremap <leader>d "_d
 xnoremap <leader>d "_d
 set clipboard=unnamedplus
