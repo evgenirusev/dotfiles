@@ -3,13 +3,11 @@ let mapleader=" "
 
 set ttimeoutlen=100
 call plug#begin('~/.vim/plugged')
-" Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'epmatsw/ag.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'jremmen/vim-ripgrep'
 call plug#end()
 
 set nocompatible
@@ -87,3 +85,5 @@ xnoremap <Leader>rc :s///gc<Left><Left><Left>
 
 nnoremap <silent> s* :let @/='\<'.expand('<cword>').'\>'<CR>cgn
 xnoremap <silent> s* "sy:let @/=@s<CR>cgn
+
+nnoremap <silent> <C-p> :FZF -m<CR>
