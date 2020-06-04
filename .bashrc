@@ -116,7 +116,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-alias co="git commit -m $*"
+alias co="git commit -m"
 alias s="git status"
 alias c="git checkout $*"
 alias a="git add ."
@@ -138,7 +138,7 @@ alias bashrc="vim ~/.bashrc"
 alias tmuxconf="vim ~/.tmux.conf"
 alias dotfiles="cd /mnt/c/Users/Evgeni/dev/dotfiles"
 alias cmd="cmd.exe"
-alias delDir="rm -rf $*"
+alias deldir="rm -rf $*"
 
 [[ $TERM != "screen" ]] && exec tmux
 
