@@ -1,4 +1,3 @@
-
 #launch tmux on startup
 [[ $TERM != "screen" ]] && exec tmux
 
@@ -27,17 +26,20 @@ alias dotfiles="cd /mnt/c/Users/Evgeni/dev/dotfiles"
 alias ma="vim /mnt/c/Users/Evgeni/dev/cp/competitive-programming/codeforces/main.cpp"
 
 function saveDotfiles() {
-    rm /mnt/c/Users/Evgeni/dev/dotfiles/.bashrc 
-    rm /mnt/c/Users/Evgeni/dev/dotfiles/.tmux.conf 
-    rm /mnt/c/Users/Evgeni/dev/dotfiles/.vimrc 
+    local path="/mnt/c/Users/Evgeni/dev/dotfiles"
 
-    cp ~/.bashrc /mnt/c/Users/Evgeni/dev/dotfiles 
-    cp ~/.vimrc /mnt/c/Users/Evgeni/dev/dotfiles 
-    cp ~/.tmux.conf /mnt/c/Users/Evgeni/dev/dotfiles 
+    dotfiles
+    rm "$path/.bashrc"
+    rm "$path/.tmux.conf"
+    rm "$path/.vimrc"
 
-    git --git-dir /mnt/c/Users/Evgeni/dev/dotfiles/.git add .
-    git --git-dir /mnt/c/Users/Evgeni/dev/dotfiles/.git commit -m "update dotfiles"
-    git --git-dir /mnt/c/Users/Evgeni/dev/dotfiles/.git push
+    cp ~/.bashrc $path
+    cp ~/.vimrc $path
+    cp ~/.tmux.conf $path
+
+    git --git-dir "$path.git add ."
+    git --git-dir "$path.git commit -m \"update dotfiles\""
+    git --git-dir "$path.git push"
 }
 
 # cp
