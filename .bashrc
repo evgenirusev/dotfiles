@@ -116,6 +116,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
+# launch tmux on startup
+[[ $TERM != "screen" ]] && exec tmux
+
+# aliases
 alias co="git commit -m"
 alias s="git status"
 alias c="git checkout $*"
@@ -144,8 +148,6 @@ alias cpr="cd /mnt/c/Users/Evgeni/dev/cp"
 alias dotfiles="cd /mnt/c/Users/Evgeni/dev/dotfiles"
 alias ma="vim /mnt/c/Users/Evgeni/dev/cp/competitive-programming/codeforces/main.cpp"
 
-[[ $TERM != "screen" ]] && exec tmux
-
 function saveDotfiles() {
    rm /mnt/c/Users/Evgeni/dev/dotfiles/.bashrc 
    rm /mnt/c/Users/Evgeni/dev/dotfiles/.tmux.conf 
@@ -158,6 +160,11 @@ function saveDotfiles() {
    git --git-dir /mnt/c/Users/Evgeni/dev/dotfiles/.git add .
    git --git-dir /mnt/c/Users/Evgeni/dev/dotfiles/.git commit -m "update dotfiles"
    git --git-dir /mnt/c/Users/Evgeni/dev/dotfiles/.git push
+}
+
+# cp
+function res() {
+    g++ /mnt/c/Users/Evgeni/dev/cp/competitive-programming/codeforces/main.cpp -o /mnt/c/Users/Evgeni/dev/cp/build/main
 }
 
 function createMain() {
@@ -173,6 +180,7 @@ function createMain() {
     echo "}" >> main.cpp
 }
 
+# utils
 function gen() {
     TMPFILE=`mktemp tmp.XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX` &&  echo $TMPFIL
     git add .
