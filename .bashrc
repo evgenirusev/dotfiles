@@ -1,3 +1,78 @@
+
+#launch tmux on startup
+[[ $TERM != "screen" ]] && exec tmux
+
+# aliases
+alias co="git commit -m"
+alias s="git status"
+alias c="git checkout $*"
+alias a="git add ."
+alias r="git reset --hard"
+alias rc="git reset --soft HEAD^"
+alias cl="git clean -fdx"
+alias pu="git pull"
+alias po="git pull origin $*"
+alias pu="git push"
+alias cl="git clone $*"
+alias e="start ."
+alias i="npm install"
+alias v="vim"
+
+# fs
+alias ds="cd /mnt/c/Users/Evgeni/dev/javascript-data-structures-and-algorithms"
+alias nodejs="code /mnt/c/Users/Evgeni/dev/NodeJSPractice"
+alias dev="cd /mnt/c/Users/Evgeni/dev"
+alias cpr="cd /mnt/c/Users/Evgeni/dev/cp"
+alias dotfiles="cd /mnt/c/Users/Evgeni/dev/dotfiles"
+alias ma="vim /mnt/c/Users/Evgeni/dev/cp/competitive-programming/codeforces/main.cpp"
+
+function saveDotfiles() {
+    rm /mnt/c/Users/Evgeni/dev/dotfiles/.bashrc 
+    rm /mnt/c/Users/Evgeni/dev/dotfiles/.tmux.conf 
+    rm /mnt/c/Users/Evgeni/dev/dotfiles/.vimrc 
+
+    cp ~/.bashrc /mnt/c/Users/Evgeni/dev/dotfiles 
+    cp ~/.vimrc /mnt/c/Users/Evgeni/dev/dotfiles 
+    cp ~/.tmux.conf /mnt/c/Users/Evgeni/dev/dotfiles 
+
+    git --git-dir /mnt/c/Users/Evgeni/dev/dotfiles/.git add .
+    git --git-dir /mnt/c/Users/Evgeni/dev/dotfiles/.git commit -m "update dotfiles"
+    git --git-dir /mnt/c/Users/Evgeni/dev/dotfiles/.git push
+}
+
+# cp
+function res() {
+    g++ /mnt/c/Users/Evgeni/dev/cp/competitive-programming/codeforces/main.cpp -o /mnt/c/Users/Evgeni/dev/cp/build/main
+}
+
+function createMain() {
+    echo "" >> myfile.txt
+    echo "this is 2nd line text" >> file.txt
+    echo "last line!" >> file.txt
+
+    echo "#include <iostream>" >> main.cpp
+    echo "" >> main.cpp
+    echo "int main()" >> main.cpp
+    echo "{" >> main.cpp
+    echo "    std::cout << "Hello World!";" >> main.cpp
+    echo "}" >> main.cpp
+}
+
+# utils
+function gen() {
+    TMPFILE=`mktemp tmp.XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX` &&  echo $TMPFIL
+    git add .
+    git commit -m "update"
+}
+
+function so() {
+    source ~/.bashrc
+}
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ end of custom configs ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
+
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -5,7 +80,7 @@
 # If not running interactively, don't do anything
 case $- in
     *i*) ;;
-      *) return;;
+    *) return;;
 esac
 
 # don't put duplicate lines or lines starting with space in the history.
@@ -47,12 +122,12 @@ esac
 
 if [ -n "$force_color_prompt" ]; then
     if [ -x /usr/bin/tput ] && tput setaf 1 >&/dev/null; then
-	# We have color support; assume it's compliant with Ecma-48
-	# (ISO/IEC-6429). (Lack of such support is extremely rare, and such
-	# a case would tend to support setf rather than setaf.)
-	color_prompt=yes
+        # We have color support; assume it's compliant with Ecma-48
+        # (ISO/IEC-6429). (Lack of such support is extremely rare, and such
+        # a case would tend to support setf rather than setaf.)
+        color_prompt=yes
     else
-	color_prompt=
+        color_prompt=
     fi
 fi
 
@@ -65,11 +140,11 @@ unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
-xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    ;;
-*)
-    ;;
+    xterm*|rxvt*)
+        PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+        ;;
+    *)
+        ;;
 esac
 
 # enable color support of ls and also add handy aliases
@@ -109,84 +184,9 @@ fi
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
 if ! shopt -oq posix; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-  fi
+    if [ -f /usr/share/bash-completion/bash_completion ]; then
+        . /usr/share/bash-completion/bash_completion
+    elif [ -f /etc/bash_completion ]; then
+        . /etc/bash_completion
+    fi
 fi
-
-# launch tmux on startup
-[[ $TERM != "screen" ]] && exec tmux
-
-# aliases
-alias co="git commit -m"
-alias s="git status"
-alias c="git checkout $*"
-alias a="git add ."
-alias r="git reset --hard"
-alias rc="git reset --soft HEAD^"
-alias cl="git clean -fdx"
-alias pu="git pull"
-alias po="git pull origin $*"
-alias pu="git push"
-alias cl="git clone $*"
-alias e="start ."
-alias i="npm install"
-alias vimrc="vim ~/.vimrc"
-alias bashrc="vim ~/.bashrc"
-alias tmuxconf="vim ~/.tmux.conf"
-alias cmd="cmd.exe"
-alias deldir="rm -rf $*"
-alias v="vim"
-
-# fs
-alias ds="cd /mnt/c/Users/Evgeni/dev/javascript-data-structures-and-algorithms"
-alias nodejs="code /mnt/c/Users/Evgeni/dev/NodeJSPractice"
-alias dev="cd /mnt/c/Users/Evgeni/dev"
-alias cpr="cd /mnt/c/Users/Evgeni/dev/cp"
-alias dotfiles="cd /mnt/c/Users/Evgeni/dev/dotfiles"
-alias ma="vim /mnt/c/Users/Evgeni/dev/cp/competitive-programming/codeforces/main.cpp"
-
-function saveDotfiles() {
-   rm /mnt/c/Users/Evgeni/dev/dotfiles/.bashrc 
-   rm /mnt/c/Users/Evgeni/dev/dotfiles/.tmux.conf 
-   rm /mnt/c/Users/Evgeni/dev/dotfiles/.vimrc 
-
-   cp ~/.bashrc /mnt/c/Users/Evgeni/dev/dotfiles 
-   cp ~/.vimrc /mnt/c/Users/Evgeni/dev/dotfiles 
-   cp ~/.tmux.conf /mnt/c/Users/Evgeni/dev/dotfiles 
-
-   git --git-dir /mnt/c/Users/Evgeni/dev/dotfiles/.git add .
-   git --git-dir /mnt/c/Users/Evgeni/dev/dotfiles/.git commit -m "update dotfiles"
-   git --git-dir /mnt/c/Users/Evgeni/dev/dotfiles/.git push
-}
-
-# cp
-function res() {
-    g++ /mnt/c/Users/Evgeni/dev/cp/competitive-programming/codeforces/main.cpp -o /mnt/c/Users/Evgeni/dev/cp/build/main
-}
-
-function createMain() {
-    echo "" >> myfile.txt
-    echo "this is 2nd line text" >> file.txt
-    echo "last line!" >> file.txt
-
-    echo "#include <iostream>" >> main.cpp
-    echo "" >> main.cpp
-    echo "int main()" >> main.cpp
-    echo "{" >> main.cpp
-    echo "    std::cout << "Hello World!";" >> main.cpp
-    echo "}" >> main.cpp
-}
-
-# utils
-function gen() {
-    TMPFILE=`mktemp tmp.XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX` &&  echo $TMPFIL
-    git add .
-    git commit -m "update"
-}
-
-function so() {
-    source ~/.bashrc
-}
