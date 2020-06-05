@@ -15,6 +15,11 @@ alias pu="git push"
 alias cl="git clone $*"
 alias e="start ."
 alias i="npm install"
+alias vimrc="vim ~/.vimrc"	
+alias bashrc="vim ~/.bashrc"	
+alias tmuxconf="vim ~/.tmux.conf"	
+alias cmd="cmd.exe"	
+alias deldir="rm -rf $*"
 alias v="vim"
 
 # fs
@@ -37,9 +42,11 @@ function saveDotfiles() {
     cp ~/.vimrc $path
     cp ~/.tmux.conf $path
 
-    git --git-dir "$path.git add ."
-    git --git-dir "$path.git commit -m \"update dotfiles\""
-    git --git-dir "$path.git push"
+    git --git-dir /mnt/c/Users/Evgeni/dev/dotfiles/.git add .
+    git --git-dir /mnt/c/Users/Evgeni/dev/dotfiles/.git commit -m "update dotfiles"
+    git --git-dir /mnt/c/Users/Evgeni/dev/dotfiles/.git push
+
+    cd -
 }
 
 # cp
