@@ -21,14 +21,16 @@ alias tmuxconf="vim ~/.tmux.conf"
 alias cmd="cmd.exe"	
 alias deldir="rm -rf $*"
 alias v="vim"
+alias onecli="/mnt/d/OneNoteCLI/OneNoteCLI.exe"
 
 # fs
-alias ds="cd /mnt/c/Users/Evgeni/dev/javascript-data-structures-and-algorithms"
-alias nodejs="code /mnt/c/Users/Evgeni/dev/NodeJSPractice"
-alias dev="cd /mnt/c/Users/Evgeni/dev"
-alias cpr="cd /mnt/c/Users/Evgeni/dev/cp"
-alias dotfiles="cd /mnt/c/Users/Evgeni/dev/dotfiles"
-alias ma="vim /mnt/c/Users/Evgeni/dev/cp/competitive-programming/codeforces/main.cpp"
+wslPath="/mnt/c/Users/Evgeni/dev"
+alias ds="cd $wslPath/javascript-data-structures-and-algorithms"
+alias nodejs="code $wslPath/NodeJSPractice"
+alias dev="cd $wslPath"
+alias cpr="cd $wslPath/cp"
+alias dotfiles="cd $wslPath/dotfiles"
+alias ma="vim $wslPath/cp/competitive-programming/codeforces/main.cpp"
 
 function saveDotfiles() {
     local path="/mnt/c/Users/Evgeni/dev/dotfiles"
