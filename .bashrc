@@ -31,6 +31,7 @@ alias dev="cd $wslPath"
 alias cpr="cd $wslPath/cp"
 alias dotfiles="cd $wslPath/dotfiles"
 alias ma="vim $wslPath/cp/competitive-programming/codeforces/main.cpp"
+alias aut="cd $wslPath/scripts-automation-generator"
 
 function saveDotfiles() {
     local path="/mnt/c/Users/Evgeni/dev/dotfiles"
