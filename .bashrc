@@ -38,6 +38,7 @@ alias dev="cd $wslPath"
 alias cpr="cd $wslPath/cp"
 alias dotfiles="cd $wslPath/dotfiles"
 alias ma="vim $wslPath/cp/competitive-programming/codeforces/main.cpp"
+alias codeforces="cd $wslPath/cp/competitive-programming/codeforces"
 alias aut="cd $wslPath/scripts-automation-generator"
 
 # utils
@@ -80,7 +81,6 @@ function res() {
 
 function createMain() {
     cd "$wslPath/cp/competitive-programming/codeforces"    
-    rm main.cpp
     echo "#include <iostream>" >> main.cpp
     echo "using namespace std;" >> main.cpp
     echo "" >> main.cpp
@@ -91,9 +91,13 @@ function createMain() {
     cd -
 }
 
-function pushSolution() {
+function pushSol() {
     cd "$wslPath/cp/competitive-programming/codeforces"
     mv main.cpp "$1.cpp"
+    git add .
+    git commit -m "add $1"
+    git push
+    createMain
     cd -
 }
 
