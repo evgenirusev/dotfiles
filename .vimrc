@@ -24,6 +24,8 @@ set noshowmatch
 " turn hybrid line numbers on
 set nu!
 set rnu
+set incsearch
+set hlsearch
 
 set cmdheight=2
 set updatetime=50
@@ -78,8 +80,15 @@ nnoremap <silent> <Leader>pv :NERDTreeFind<CR>
 
 :nnoremap <Leader>v <c-v>
 
+" Press * to search for the term under the cursor or a visual selection and
+" " then press a key below to replace all instances of it in the current file.
 nnoremap <Leader>r :%s///g<Left><Left>
 nnoremap <Leader>rc :%s///gc<Left><Left><Left>
+
+" The same as above but instead of acting on the whole file it will be
+" " restricted to the previously visually selected range. You can do that by
+" " pressing *, visually selecting the range you want it to apply to and then
+" " press a key below to replace all instances of it in the current selection.
 xnoremap <Leader>r :s///g<Left><Left>
 xnoremap <Leader>rc :s///gc<Left><Left><Left>
 

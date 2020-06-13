@@ -1,6 +1,7 @@
 #launch tmux on startup
 [[ $TERM != "screen" ]] && exec tmux
 
+# aliases
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
@@ -8,7 +9,6 @@ alias .....="cd ../../../.."
 alias ~="cd ~"
 alias -- -="cd -"
 
-# aliases
 alias co="git commit -m"
 alias s="git status"
 alias c="git checkout $*"
@@ -62,6 +62,8 @@ function saveDotfiles() {
 # cp
 function res() {
     g++ /mnt/c/Users/Evgeni/dev/cp/competitive-programming/codeforces/main.cpp -o /mnt/c/Users/Evgeni/dev/cp/build/main
+    /mnt/c/Users/Evgeni/dev/cp/build/main
+    echo "";
 }
 
 function createMain() {
