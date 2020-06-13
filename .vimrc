@@ -8,6 +8,7 @@ Plug 'epmatsw/ag.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'ycm-core/YouCompleteMe'
 
 " Automatically clear search highlights after you move your cursor.
 Plug 'haya14busa/is.vim'
