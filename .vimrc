@@ -106,3 +106,6 @@ xnoremap <silent> s* "sy:let @/=@s<CR>cgn
 
 " GFiles instead of Files in order to ignore node_modules
 nnoremap <silent> <C-p> :GFiles<CR>
+
+map <F2> :w! <CR>
+map <F3> :wq! <CR>
