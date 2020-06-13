@@ -88,6 +88,7 @@ function gen() {
 
 function so() {
     source ~/.bashrc
+    tmux source-file ~/.tmux.conf
 }
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
