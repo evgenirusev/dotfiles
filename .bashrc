@@ -1,6 +1,13 @@
 #launch tmux on startup
 [[ $TERM != "screen" ]] && exec tmux
 
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ~="cd ~"
+alias -- -="cd -"
+
 # aliases
 alias co="git commit -m"
 alias s="git status"
