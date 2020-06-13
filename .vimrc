@@ -30,14 +30,15 @@ set noshowmatch
 " turn hybrid line numbers on
 set nu!
 set rnu
+
 set incsearch
 set hlsearch
 set ignorecase
-
 set cmdheight=2
 set updatetime=50
-" Delete without copying
+set nowrap
 
+" Delete without copying
 nnoremap <leader>d "_d
 xnoremap <leader>d "_d
 set clipboard=unnamedplus

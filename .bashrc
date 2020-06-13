@@ -1,4 +1,4 @@
-#launch tmux on startup
+
 [[ $TERM != "screen" ]] && exec tmux
 
 # aliases
@@ -19,7 +19,7 @@ alias cl="git clean -fdx"
 alias pu="git pull"
 alias po="git pull origin $*"
 alias pu="git push"
-alias cl="git clone $*"
+alias clo="git clone $*"
 alias e="start ."
 alias i="npm install"
 alias vimrc="vim ~/.vimrc"	
@@ -40,8 +40,20 @@ alias dotfiles="cd $wslPath/dotfiles"
 alias ma="vim $wslPath/cp/competitive-programming/codeforces/main.cpp"
 alias aut="cd $wslPath/scripts-automation-generator"
 
+# utils
+function gen() {
+    TMPFILE=`mktemp tmp.XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX` &&  echo $TMPFIL
+    git add .
+    git commit -m "update"
+}
+
+function so() {
+    source ~/.bashrc
+    tmux source-file ~/.tmux.conf
+}
+
 function saveDotfiles() {
-    local path="/mnt/c/Users/Evgeni/dev/dotfiles"
+    local path="$wslPath/dotfiles"
 
     dotfiles
     rm "$path/.bashrc"
@@ -61,38 +73,32 @@ function saveDotfiles() {
 
 # cp
 function res() {
-    g++ /mnt/c/Users/Evgeni/dev/cp/competitive-programming/codeforces/main.cpp -o /mnt/c/Users/Evgeni/dev/cp/build/main
+    g++ "$wslPath/cp/competitive-programming/codeforces/main.cpp" -o /mnt/c/Users/Evgeni/dev/cp/build/main
     /mnt/c/Users/Evgeni/dev/cp/build/main
     echo "";
 }
 
 function createMain() {
-    echo "" >> myfile.txt
-    echo "this is 2nd line text" >> file.txt
-    echo "last line!" >> file.txt
-
+    cd "$wslPath/cp/competitive-programming/codeforces"    
+    rm main.cpp
     echo "#include <iostream>" >> main.cpp
+    echo "using namespace std;" >> main.cpp
     echo "" >> main.cpp
     echo "int main()" >> main.cpp
     echo "{" >> main.cpp
-    echo "    std::cout << "Hello World!";" >> main.cpp
+    echo "    " >> main.cpp
     echo "}" >> main.cpp
+    cd -
 }
 
-# utils
-function gen() {
-    TMPFILE=`mktemp tmp.XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX` &&  echo $TMPFIL
-    git add .
-    git commit -m "update"
-}
-
-function so() {
-    source ~/.bashrc
-    tmux source-file ~/.tmux.conf
+function pushSolution() {
+    cd "$wslPath/cp/competitive-programming/codeforces"
+    mv main.cpp "$1.cpp"
+    cd -
 }
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
-# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ end of custom configs ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
 
 # ~/.bashrc: executed by bash(1) for non-login shells.
