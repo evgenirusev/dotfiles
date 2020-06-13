@@ -73,6 +73,7 @@ function saveDotfiles() {
 
 # cp
 function res() {
+    clear
     g++ "$wslPath/cp/competitive-programming/codeforces/main.cpp" -o /mnt/c/Users/Evgeni/dev/cp/build/main
     /mnt/c/Users/Evgeni/dev/cp/build/main
     echo "";
@@ -80,7 +81,7 @@ function res() {
 
 function createMain() {
     cd "$wslPath/cp/competitive-programming/codeforces"    
-    echo "#include <iostream>" >> main.cpp
+    echo "#include <bits/stdc++.h>" >> main.cpp
     echo "using namespace std;" >> main.cpp
     echo "" >> main.cpp
     echo "int main()" >> main.cpp

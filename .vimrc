@@ -58,13 +58,13 @@ nnoremap <silent> <Leader>pv :NERDTreeFind<CR>
 
 " function to toggle number mode
 function! g:ToggleNuMode()
-	if(&number == 1)
-		set number
-		set relativenumber!
-	else
-		set relativenumber!
-		set number!
-	endif
+    if(&number == 1)
+        set number
+        set relativenumber!
+    else
+        set relativenumber!
+        set number!
+    endif
 endfunc
 
 " map the above function to F4
@@ -109,3 +109,4 @@ nnoremap <silent> <C-p> :GFiles<CR>
 
 map <F2> :w! <CR>
 map <F3> :wq! <CR>
+map <F9> gg=G<C-o><C-o>
