@@ -1,4 +1,3 @@
-
 [[ $TERM != "screen" ]] && exec tmux
 
 # aliases
