@@ -8,6 +8,12 @@ Plug 'epmatsw/ag.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+
+" Automatically clear search highlights after you move your cursor.
+Plug 'haya14busa/is.vim'
+
+" modify default behavior for star regarding visual seleciton
+Plug 'nelstrom/vim-visual-star-search'
 call plug#end()
 
 set nocompatible
@@ -26,6 +32,7 @@ set nu!
 set rnu
 set incsearch
 set hlsearch
+set ignorecase
 
 set cmdheight=2
 set updatetime=50
@@ -95,4 +102,5 @@ xnoremap <Leader>rc :s///gc<Left><Left><Left>
 nnoremap <silent> s* :let @/='\<'.expand('<cword>').'\>'<CR>cgn
 xnoremap <silent> s* "sy:let @/=@s<CR>cgn
 
-nnoremap <silent> <C-p> :FZF -m<CR>
+" GFiles instead of Files in order to ignore node_modules
+nnoremap <silent> <C-p> :GFiles<CR>
