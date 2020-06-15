@@ -9,6 +9,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'ycm-core/YouCompleteMe'
+Plug '907th/vim-auto-save'
 
 " Automatically clear search highlights after you move your cursor.
 Plug 'haya14busa/is.vim'
@@ -110,3 +111,5 @@ nnoremap <silent> <C-p> :GFiles<CR>
 map <F2> :w! <CR>
 map <F3> :wq! <CR>
 map <F9> gg=G<C-o><C-o>
+
+let g:auto_save = 1  " enable AutoSave on Vim startup
