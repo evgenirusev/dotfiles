@@ -17,6 +17,12 @@ Plug 'haya14busa/is.vim'
 
 " modify default behavior for star regarding visual seleciton
 Plug 'nelstrom/vim-visual-star-search'
+
+Plug 'morhetz/gruvbox'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+let g:airline_theme='gruvbox'
+
 call plug#end()
 
 set nocompatible
@@ -109,8 +115,7 @@ xnoremap <silent> s* "sy:let @/=@s<CR>cgn
 " GFiles instead of Files in order to ignore node_modules
 nnoremap <silent> <C-p> :GFiles<CR>
 
-map <F2> :w! <CR>
-map <F3> :wq! <CR>
+map <F2> :wq! <CR>
 map <F9> gg=G<C-o><C-o>
 
 let g:auto_save = 1  " enable AutoSave on Vim startup
