@@ -29,6 +29,9 @@ alias deldir="rm -rf $*"
 alias v="vim"
 alias onecli="/mnt/d/OneNoteCLI/OneNoteCLI.exe"
 
+# Enable aliases to be sudo’ed
+alias sudo='sudo '
+
 # fs
 wslPath="/mnt/c/Users/Evgeni/dev"
 alias ds="cd $wslPath/javascript-data-structures-and-algorithms"
@@ -36,6 +39,7 @@ alias nodejs="code $wslPath/NodeJSPractice"
 alias dev="cd $wslPath"
 alias cpr="cd $wslPath/cp"
 alias dotfiles="cd $wslPath/dotfiles"
+alias sa="vim $wslPath/cp/sandbox/main.cpp"
 alias ma="vim $wslPath/cp/competitive-programming/codeforces/main.cpp"
 alias codeforces="cd $wslPath/cp/competitive-programming/codeforces"
 alias aut="cd $wslPath/scripts-automation-generator"
