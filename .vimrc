@@ -10,6 +10,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'ycm-core/YouCompleteMe'
 Plug '907th/vim-auto-save'
+Plug 'preservim/nerdcommenter'
 
 " Automatically clear search highlights after you move your cursor.
 Plug 'haya14busa/is.vim'
