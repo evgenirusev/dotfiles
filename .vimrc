@@ -118,3 +118,8 @@ let g:auto_save = 1  " enable AutoSave on Vim startup
 " compile and run programs
 map <Leader>2 :exe "!tmux send -t 2 'sandbox' Enter" <CR><CR>
 map <Leader>3 :exe "!tmux send -t 2 'res' Enter" <CR><CR>
+
+" Add spaces after comment delimiters by default
+let g:NERDSpaceDelims = 1
+
+set background=dark
