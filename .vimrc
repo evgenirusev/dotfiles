@@ -78,8 +78,8 @@ function! g:ToggleNuMode()
     endif
 endfunc
 
-" map the above function to F4
-nnoremap <f4> :call g:ToggleNuMode()<cr>
+" map the above function to F1
+nnoremap <f1> :call g:ToggleNuMode()<cr>
 
 let g:coc_disable_startup_warning = 1
 map <C-n> :NERDTreeToggle<CR>
