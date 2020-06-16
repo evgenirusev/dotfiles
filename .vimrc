@@ -136,3 +136,6 @@ map <Leader>ac ggVGy
 set background=dark 
 set t_Co=256
 colorscheme gruvbox
+
+" insert single character in normal mode
+nmap <C-i> i_<Esc>r
