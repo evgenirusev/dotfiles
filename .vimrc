@@ -139,3 +139,4 @@ colorscheme gruvbox
 
 " insert single character in normal mode
 nmap <C-i> i_<Esc>r
+nmap <C-a> <Right>i_<Esc>r
