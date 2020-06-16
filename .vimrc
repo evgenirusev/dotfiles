@@ -11,6 +11,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'ycm-core/YouCompleteMe'
 Plug '907th/vim-auto-save'
 Plug 'preservim/nerdcommenter'
+Plug 'ParamagicDev/vim-medic_chalk'
 
 " Automatically clear search highlights after you move your cursor.
 Plug 'haya14busa/is.vim'
@@ -18,10 +19,12 @@ Plug 'haya14busa/is.vim'
 " modify default behavior for star regarding visual seleciton
 Plug 'nelstrom/vim-visual-star-search'
 
+" colorschemes
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 let g:airline_theme='gruvbox'
+Plug 'octol/vim-cpp-enhanced-highlight'
 
 call plug#end()
 
@@ -127,4 +130,9 @@ map <Leader>3 :exe "!tmux send -t 2 'res' Enter" <CR><CR>
 " Add spaces after comment delimiters by default
 let g:NERDSpaceDelims = 1
 
-set background=dark
+map <Leader>ac ggVGy
+
+" colorschemes
+set background=dark 
+set t_Co=256
+colorscheme gruvbox
