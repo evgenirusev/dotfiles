@@ -148,3 +148,5 @@ let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 let g:ycm_autoclose_preview_window_after_completion = 1
 nmap <silent> <Leader>gd :YcmCompleter GoTo<CR>
 nmap <silent> <Leader>gf :YcmCompleter FixIt<CR>
+nmap <silent> <Leader>gi :YcmCompleter GoToImplementation<CR>
+set splitbelow
