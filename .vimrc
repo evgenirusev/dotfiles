@@ -25,6 +25,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 let g:airline_theme='gruvbox'
 Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 
 call plug#end()
 
@@ -141,3 +142,5 @@ colorscheme gruvbox
 " insert single character in normal mode
 nmap <C-i> i_<Esc>r
 nmap <C-a> <Right>i_<Esc>r
+
+let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/.ycm_extra_conf.py'

@@ -83,6 +83,13 @@ function res() {
     echo "";
 }
 
+function resCustom() {
+    clear
+    g++ "$wslPath/cp/competitive-programming/codeforces/$1" -o "/mnt/c/Users/Evgeni/dev/cp/build/main"
+    "/mnt/c/Users/Evgeni/dev/cp/build/main"
+    echo "";
+}
+
 function createMain() {
     cd "$wslPath/cp/competitive-programming/codeforces"    
     echo "#include <bits/stdc++.h>" >> main.cpp
@@ -91,6 +98,7 @@ function createMain() {
     echo "int main()" >> main.cpp
     echo "{" >> main.cpp
     echo "    " >> main.cpp
+    echo "    return 0;" >> main.cpp
     echo "}" >> main.cpp
     cd -
 }
@@ -105,7 +113,6 @@ function pushSol() {
     cd -
 }
 
-
 # sandbox
 function sandbox() {
     clear
@@ -114,11 +121,8 @@ function sandbox() {
     echo "";
 }
 
-export PATH=$PATH:/usr/local/go/bin
-export GOPATH="$HOME/go_projects"
-export GOBIN="$GOPATH/bin"
-export GOROOT=$HOME/go1.X
-export PATH=$PATH:$GOROOT/bin
+export GOPATH=$HOME/go
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
