@@ -146,5 +146,5 @@ nmap <C-a> <Right>i_<Esc>r
 " YCM
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 let g:ycm_autoclose_preview_window_after_completion = 1
-nmap <silent> <Leader>gd :YcmCompleted GoTo<CR>
-nmap <silent> <Leader>gf :YcmCompleted FixIt<CR>
+nmap <silent> <Leader>gd :YcmCompleter GoTo<CR>
+nmap <silent> <Leader>gf :YcmCompleter FixIt<CR>
