@@ -150,3 +150,24 @@ nmap <silent> <Leader>gd :YcmCompleter GoTo<CR>
 nmap <silent> <Leader>gf :YcmCompleter FixIt<CR>
 nmap <silent> <Leader>gi :YcmCompleter GoToImplementation<CR>
 set splitbelow
+
+" colors
+nmap <silent> <Leader>col1 :colorscheme gruvbox<CR>
+nmap <silent> <Leader>col2 :color blue<CR>
+nmap <silent> <Leader>col3 :color delek<CR>
+nmap <silent> <Leader>col4 :color evening<CR>
+nmap <silent> <Leader>col5 :color morning<CR>
+nmap <silent> <Leader>col6 :color peachpuff<CR>
+nmap <silent> <Leader>col7 :color slate<CR>
+nmap <silent> <Leader>col8 :color darkblue<CR>
+nmap <silent> <Leader>col9 :color desert<CR>
+nmap <silent> <Leader>col10 :color industry<CR>
+nmap <silent> <Leader>col11 :color murphy<CR>
+nmap <silent> <Leader>col12 :color ron<CR>
+nmap <silent> <Leader>col13 :color torte<CR>
+nmap <silent> <Leader>col14 :color elflord<CR>
+nmap <silent> <Leader>col15 :color default<CR>
+nmap <silent> <Leader>col16 :color kolehler<CR>
+nmap <silent> <Leader>col17 :color pablo<CR>
+nmap <silent> <Leader>col18 :color shine<CR>
+nmap <silent> <Leader>col19 :color zellner<CR>
