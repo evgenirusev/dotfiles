@@ -143,4 +143,8 @@ colorscheme gruvbox
 nmap <C-i> i_<Esc>r
 nmap <C-a> <Right>i_<Esc>r
 
-let g:ycm_global_ycm_extra_conf = '~/.vim/plugged/YouCompleteMe/.ycm_extra_conf.py'
+" YCM
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+let g:ycm_autoclose_preview_window_after_completion = 1
+nmap <silent> <Leader>gd :YcmCompleted GoTo<CR>
+nmap <silent> <Leader>gf :YcmCompleted FixIt<CR>
