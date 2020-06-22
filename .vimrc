@@ -149,9 +149,10 @@ let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 nmap <silent> <Leader>gd :YcmCompleter GoTo<CR>
 nmap <silent> <Leader>gf :YcmCompleter FixIt<CR>
 nmap <silent> <Leader>gi :YcmCompleter GoToImplementation<CR>
-let g:ycm_auto_hover = 'GetDoc'
+let g:ycm_auto_hover = 'GetType'
 set completeopt-=preview
 set splitbelow
+nmap <leader>y <plug>(YCMHover)
 
 " colors
 nmap <silent> <Leader>col1 :colorscheme gruvbox<CR>
