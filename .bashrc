@@ -33,7 +33,7 @@ alias onecli="/mnt/d/OneNoteCLI/OneNoteCLI.exe"
 alias sudo='sudo '
 
 # fs
-wslPath="/mnt/c/Users/Evgeni/dev"
+wslPath="/mnt/c/Users/zupso/dev"
 alias ds="cd $wslPath/javascript-data-structures-and-algorithms"
 alias nodejs="code $wslPath/NodeJSPractice"
 alias dev="cd $wslPath"
@@ -68,9 +68,9 @@ function saveDotfiles() {
     cp ~/.vimrc $path
     cp ~/.tmux.conf $path
 
-    git --git-dir /mnt/c/Users/Evgeni/dev/dotfiles/.git add .
-    git --git-dir /mnt/c/Users/Evgeni/dev/dotfiles/.git commit -m "update dotfiles"
-    git --git-dir /mnt/c/Users/Evgeni/dev/dotfiles/.git push
+    git --git-dir /mnt/c/Users/zupso/dev/dotfiles/.git add .
+    git --git-dir /mnt/c/Users/zupso/dev/dotfiles/.git commit -m "update dotfiles"
+    git --git-dir /mnt/c/Users/zupso/dev/dotfiles/.git push
 
     cd -
 }
@@ -78,15 +78,15 @@ function saveDotfiles() {
 # cp
 function res() {
     clear
-    g++ "$wslPath/cp/competitive-programming/codeforces/main.cpp" -o /mnt/c/Users/Evgeni/dev/cp/build/main
-    /mnt/c/Users/Evgeni/dev/cp/build/main
+    g++ "$wslPath/cp/competitive-programming/codeforces/main.cpp" -o /mnt/c/Users/zupso/dev/cp/build/main
+    /mnt/c/Users/zupso/dev/cp/build/main
     echo "";
 }
 
 function resCustom() {
     clear
-    g++ "$wslPath/cp/competitive-programming/codeforces/$1" -o "/mnt/c/Users/Evgeni/dev/cp/build/main"
-    "/mnt/c/Users/Evgeni/dev/cp/build/main"
+    g++ "$wslPath/cp/competitive-programming/codeforces/$1" -o "/mnt/c/Users/zupso/dev/cp/build/main"
+    "/mnt/c/Users/zupso/dev/cp/build/main"
     echo "";
 }
 
@@ -116,13 +116,14 @@ function pushSol() {
 # sandbox
 function sandbox() {
     clear
-    g++ "$wslPath/cp/sandbox/main.cpp" -o /mnt/c/Users/Evgeni/dev/cp/build/main
-    /mnt/c/Users/Evgeni/dev/cp/build/main
+    g++ "$wslPath/cp/sandbox/main.cpp" -o /mnt/c/Users/zupso/dev/cp/build/main
+    /mnt/c/Users/zupso/dev/cp/build/main
     echo "";
 }
 
 export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+export DISPLAY=localhost:0
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
