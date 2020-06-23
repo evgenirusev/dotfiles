@@ -39,8 +39,9 @@ alias nodejs="code $wslPath/NodeJSPractice"
 alias dev="cd $wslPath"
 alias cpr="cd $wslPath/cp"
 alias dotfiles="cd $wslPath/dotfiles"
-alias sa="vim $wslPath/cp/sandbox/main.cpp"
-alias ma="vim $wslPath/cp/competitive-programming/codeforces/main.cpp"
+alias ma1="vim $wslPath/cp/competitive-programming/codeforces/main.cpp"
+alias ma2="vim $wslPath/cp/sandbox/main2.cpp"
+alias ma3="vim $wslPath/cp/sandbox/main3.cpp"
 alias codeforces="cd $wslPath/cp/competitive-programming/codeforces"
 alias aut="cd $wslPath/scripts-automation-generator"
 
@@ -76,7 +77,7 @@ function saveDotfiles() {
 }
 
 # cp
-function res() {
+function ma1() {
     clear
     g++ "$wslPath/cp/competitive-programming/codeforces/main.cpp" -o /mnt/c/Users/zupso/dev/cp/build/main
     /mnt/c/Users/zupso/dev/cp/build/main
@@ -114,9 +115,16 @@ function pushSol() {
 }
 
 # sandbox
-function sandbox() {
+function main2() {
     clear
-    g++ "$wslPath/cp/sandbox/main.cpp" -o /mnt/c/Users/zupso/dev/cp/build/main
+    g++ "$wslPath/cp/sandbox/main2.cpp" -o /mnt/c/Users/zupso/dev/cp/build/main
+    /mnt/c/Users/zupso/dev/cp/build/main
+    echo "";
+}
+
+function main3() {
+    clear
+    g++ "$wslPath/cp/sandbox/main3.cpp" -o /mnt/c/Users/zupso/dev/cp/build/main
     /mnt/c/Users/zupso/dev/cp/build/main
     echo "";
 }
