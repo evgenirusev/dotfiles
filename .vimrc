@@ -125,7 +125,7 @@ map <F9> gg=G<C-o><C-o>
 let g:auto_save = 1  " enable AutoSave on Vim startup
 
 " compile and run programs
-map <Leader>1 :exe "!tmux send -t 2 'res' Enter" <CR><CR>
+map <Leader>1 :exe "!tmux send -t 2 'main1' Enter" <CR><CR>
 map <Leader>2 :exe "!tmux send -t 2 'main2' Enter" <CR><CR>
 map <Leader>3 :exe "!tmux send -t 2 'main3' Enter" <CR><CR>
 

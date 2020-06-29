@@ -114,7 +114,14 @@ function pushSol() {
     cd -
 }
 
-# sandbox
+# code execution environment
+function main1() {
+    clear
+    g++ "$wslPath/cp/competitive-programming/codeforces/main.cpp" -o /mnt/c/Users/zupso/dev/cp/build/main
+    /mnt/c/Users/zupso/dev/cp/build/main
+    echo "";
+}
+
 function main2() {
     clear
     g++ "$wslPath/cp/sandbox/main2.cpp" -o /mnt/c/Users/zupso/dev/cp/build/main
