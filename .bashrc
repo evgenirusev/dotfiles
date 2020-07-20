@@ -27,7 +27,6 @@ alias tmuxconf="vim ~/.tmux.conf"
 alias cmd="cmd.exe"	
 alias deldir="rm -rf $*"
 alias v="vim"
-alias onecli="/mnt/d/OneNoteCLI/OneNoteCLI.exe"
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
@@ -35,7 +34,8 @@ alias sudo='sudo '
 # fs
 wslPath="/mnt/c/Users/zupso/dev"
 alias ds="cd $wslPath/javascript-data-structures-and-algorithms"
-alias nodejs="code $wslPath/NodeJSPractice"
+alias nodejs="vim $wslPath/nodejs/index.js"
+alias noderes="node $wslPath/nodejs/index.js"
 alias dev="cd $wslPath"
 alias cpr="cd $wslPath/cp"
 alias dotfiles="cd $wslPath/dotfiles"
