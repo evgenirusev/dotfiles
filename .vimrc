@@ -120,7 +120,7 @@ xnoremap <silent> s* "sy:let @/=@s<CR>cgn
 nnoremap <silent> <C-p> :GFiles<CR>
 
 map <F2> :wq! <CR>
-map <F9> gg=G<C-o><C-o>
+map <Leader>fo gg=G<C-o><C-o>
 
 let g:auto_save = 1  " enable AutoSave on Vim startup
 
