@@ -65,8 +65,8 @@ nmap <leader>j :wincmd j<CR>
 nmap <leader>k :wincmd k<CR>
 nmap <leader>l :wincmd l<CR>
 nnoremap <Leader>gd :GoDef<Enter>
-nnoremap <Leader>pt :NERDTreeToggle<Enter>
-nnoremap <silent> <Leader>pv :NERDTreeFind<CR>
+nnoremap <Leader>nt :NERDTreeToggle<Enter>
+nnoremap <silent> <Leader>nf :NERDTreeFind<CR>
 
 " function to toggle number mode
 function! g:ToggleNuMode()
