@@ -1,6 +1,6 @@
 [[ $TERM != "screen" ]] && exec tmux
 
-# aliases
+# nav aliases
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
@@ -8,30 +8,38 @@ alias .....="cd ../../../.."
 alias ~="cd ~"
 alias -- -="cd -"
 
-alias co="git commit -m"
-alias s="git status"
-alias c="git checkout $*"
-alias a="git add ."
-alias r="git reset --hard"
-alias rc="git reset --soft HEAD^"
-alias cl="git clean -fdx"
-alias pu="git pull"
-alias po="git pull origin $*"
-alias pu="git push"
-alias clo="git clone $*"
-alias e="start ."
-alias i="npm install"
+# git aliases
+alias gco="git commit -m"
+alias gs="git status"
+alias gc="git checkout $*"
+alias ga="git add ."
+alias gr="git reset --hard"
+alias grc="git reset --soft HEAD^"
+alias gcl="git clean -fdx"
+alias gclo="git clone $*"
+alias gpu="git pull"
+alias gpo="git pull origin $*"
+alias gpu="git push"
+
+# config aliases
 alias vimrc="vim ~/.vimrc"	
 alias bashrc="vim ~/.bashrc"	
 alias tmuxconf="vim ~/.tmux.conf"	
+
+# npm aliases
+alias ni="npm install"
+alias nt="npm test"
+
+# general aliases
+alias v="vim"
+alias e="start ."
 alias cmd="cmd.exe"	
 alias deldir="rm -rf $*"
-alias v="vim"
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 
-# fs
+# fs aliases
 wslPath="/mnt/c/Users/zupso/dev"
 alias ds="cd $wslPath/javascript-data-structures-and-algorithms"
 alias nodejs="vim $wslPath/nodejs/index.js"
