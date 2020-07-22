@@ -103,7 +103,8 @@ let NERDTreeShowLineNumbers=1
 " make sure relative line numbers are used
 autocmd FileType nerdtree setlocal relativenumber
 
-:nnoremap <Leader>v <c-v>
+" workaround for wsl <c-v> paste
+nnoremap <Leader>v <c-v>
 
 " Press * to search for the term under the cursor or a visual selection and
 " " then press a key below to replace all instances of it in the current file.
