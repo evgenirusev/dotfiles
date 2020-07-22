@@ -98,6 +98,10 @@ nmap <leader>l :wincmd l<CR>
 nnoremap <Leader>gd :GoDef<Enter>
 nnoremap <Leader>pt :NERDTreeToggle<Enter>
 nnoremap <silent> <Leader>pv :NERDTreeFind<CR>
+" enable NERDTree line numbers
+let NERDTreeShowLineNumbers=1
+" make sure relative line numbers are used
+autocmd FileType nerdtree setlocal relativenumber
 
 :nnoremap <Leader>v <c-v>
 
