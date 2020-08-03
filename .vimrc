@@ -145,10 +145,6 @@ set background=dark
 set t_Co=256
 colorscheme gruvbox
 
-" insert single character in normal mode
-nmap <C-i> i_<Esc>r
-nmap <C-a> <Right>i_<Esc>r
-
 " YCM
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 " let g:ycm_autoclose_preview_window_after_completion = 1
