@@ -154,6 +154,19 @@ function createSolution() {
     cd $1
     touch $2.test.js
     touch $2.js
+
+    printf '%s\n' "const $2 = require('./$2')" \
+        "" \
+        "describe('$2', () => { " \
+        "   it('should ', () => {" \
+        "   }); " \
+        "});" >$2.test.js
+
+    printf '%s\n' "function $2() {" \
+        "   // TODO: implement" \
+        "}" \
+        "" \
+        "module.exports = $2" >$2.js
 }
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
