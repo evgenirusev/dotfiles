@@ -100,7 +100,7 @@ function resCustom() {
 }
 
 function createMain() {
-    cd "$wslPath/cp/competitive-programming/codeforces"    
+    cd "$wslPath/cp/competitive-programming/codeforces"
     echo "#include <bits/stdc++.h>" >> main.cpp
     echo "using namespace std;" >> main.cpp
     echo "" >> main.cpp
@@ -147,6 +147,14 @@ function main3() {
 export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 export DISPLAY=localhost:0
+
+function createSolution() {
+    cd "$wslPath/javascript-data-structures-and-algorithms/src/interview-questions"
+    mkdir $1
+    cd $1
+    touch $2.test.js
+    touch $2.js
+}
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
