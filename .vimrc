@@ -64,7 +64,7 @@ nmap <leader>h :wincmd h<CR>
 nmap <leader>j :wincmd j<CR>
 nmap <leader>k :wincmd k<CR>
 nmap <leader>l :wincmd l<CR>
-nnoremap <Leader>gd :GoDef<Enter>
+nnoremap <Leader>gt :GoDef<Enter>
 nnoremap <Leader>nt :NERDTreeToggle<Enter>
 nnoremap <silent> <Leader>nf :NERDTreeFind<CR>
 
