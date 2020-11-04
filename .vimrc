@@ -156,6 +156,10 @@ set completeopt-=preview
 set splitbelow
 nmap <leader>y <plug>(YCMHover)
 
+" Nerdtree Vertical Resize
+nmap <Leader>w> :vertical res +10<CR>
+nmap <Leader>w< :vertical res -10<CR>
+
 " colors
 nmap <silent> <Leader>col1 :colorscheme gruvbox<CR>
 nmap <silent> <Leader>col2 :color blue<CR>
