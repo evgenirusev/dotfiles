@@ -149,24 +149,24 @@ export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 export DISPLAY=localhost:0
 
 function createSolution() {
-    cd "$wslPath/javascript-data-structures-and-algorithms/src/interview-questions"
-    mkdir $1
-    cd $1
-    touch $2.test.js
-    touch $2.js
+    cd "$wslPath/javascript-data-structures-and-algorithms/src/$1"
+    mkdir $2
+    cd $2
+    touch $3.test.js
+    touch $3.js
 
-    printf '%s\n' "const $2 = require('./$2')" \
+    printf '%s\n' "const $3 = require('./$3')" \
         "" \
-        "describe('$2', () => { " \
+        "describe('$3', () => { " \
         "   it('should ', () => {" \
         "   }); " \
-        "});" >$2.test.js
+        "});" >$3.test.js
 
-    printf '%s\n' "function $2() {" \
+    printf '%s\n' "function $3() {" \
         "   // TODO: implement" \
         "}" \
         "" \
-        "module.exports = $2" >$2.js
+        "module.exports = $3" >$3.js
 }
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
