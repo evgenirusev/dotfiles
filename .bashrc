@@ -94,6 +94,7 @@ function createSolution() {
         "module.exports = $3" >$3.js
 
     cd "$wslPath/javascript-data-structures-and-algorithms"
+    ga
     v .
 }
 
