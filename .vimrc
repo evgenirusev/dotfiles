@@ -160,6 +160,8 @@ nmap <leader>y <plug>(YCMHover)
 nmap <Leader>w> :vertical res +10<CR>
 nmap <Leader>w< :vertical res -10<CR>
 
+nmap <Leader>ed :edit<CR>
+
 " colors
 nmap <silent> <Leader>col1 :colorscheme gruvbox<CR>
 nmap <silent> <Leader>col2 :color blue<CR>
