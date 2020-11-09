@@ -54,17 +54,6 @@ alias codeforces="cd $wslPath/cp/competitive-programming/codeforces"
 alias aut="cd $wslPath/scripts-automation-generator"
 
 # utils
-function gen() {
-    TMPFILE=`mktemp tmp.XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX` &&  echo $TMPFIL
-    git add .
-    git commit -m "update"
-}
-
-function so() {
-    source ~/.bashrc
-    tmux source-file ~/.tmux.conf
-}
-
 function saveDotfiles() {
     local path="$wslPath/dotfiles"
 
@@ -82,6 +71,35 @@ function saveDotfiles() {
     git --git-dir /mnt/c/Users/zupso/dev/dotfiles/.git push
 
     cd -
+}
+
+function createSolution() {
+    cd "$wslPath/javascript-data-structures-and-algorithms/src/$1"
+    mkdir $2
+    cd $2
+    touch $3.test.js
+    touch $3.js
+
+    printf '%s\n' "const $3 = require('./$3')" \
+        "" \
+        "describe('$3', () => { " \
+        "   it('should ', () => {" \
+        "   }); " \
+        "});" >$3.test.js
+
+    printf '%s\n' "function $3() {" \
+        "   // TODO: implement" \
+        "}" \
+        "" \
+        "module.exports = $3" >$3.js
+
+    cd "$wslPath/javascript-data-structures-and-algorithms"
+    v .
+}
+
+function so() {
+    source ~/.bashrc
+    tmux source-file ~/.tmux.conf
 }
 
 # cp
@@ -148,25 +166,10 @@ export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 export DISPLAY=localhost:0
 
-function createSolution() {
-    cd "$wslPath/javascript-data-structures-and-algorithms/src/$1"
-    mkdir $2
-    cd $2
-    touch $3.test.js
-    touch $3.js
-
-    printf '%s\n' "const $3 = require('./$3')" \
-        "" \
-        "describe('$3', () => { " \
-        "   it('should ', () => {" \
-        "   }); " \
-        "});" >$3.test.js
-
-    printf '%s\n' "function $3() {" \
-        "   // TODO: implement" \
-        "}" \
-        "" \
-        "module.exports = $3" >$3.js
+function gen() {
+    TMPFILE=`mktemp tmp.XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX` &&  echo $TMPFIL
+    git add .
+    git commit -m "update"
 }
 
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ #
