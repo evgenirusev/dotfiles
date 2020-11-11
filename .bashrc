@@ -80,7 +80,7 @@ function createSolution() {
     touch $3.test.js
     touch $3.js
 
-    printf '%s\n' "const $3 = require('./$3')" \
+    printf '%s\n' "const $3 = require('./$3');" \
         "" \
         "describe('$3', () => { " \
         "   it('should ', () => {" \
