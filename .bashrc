@@ -91,7 +91,7 @@ function createSolution() {
         "   // TODO: implement" \
         "}" \
         "" \
-        "module.exports = $3" >$3.js
+        "module.exports = $3;" >$3.js
 
     cd "$wslPath/javascript-data-structures-and-algorithms"
     ga
