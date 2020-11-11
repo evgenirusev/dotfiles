@@ -114,7 +114,7 @@ xnoremap <silent> s* "sy:let @/=@s<CR>cgn
 " GFiles instead of Files in order to ignore node_modules
 nnoremap <silent> <C-p> :GFiles<CR>
 
-map <F2> :wq! <CR>
+map <F2> :q <CR>
 map <Leader>fo gg=G<C-o><C-o>
 
 let g:auto_save = 1  " enable AutoSave on Vim startup
