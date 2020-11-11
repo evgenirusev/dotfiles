@@ -12,6 +12,7 @@ Plug '907th/vim-auto-save'
 Plug 'preservim/nerdcommenter'
 Plug 'ParamagicDev/vim-medic_chalk'
 Plug 'ycm-core/YouCompleteMe'
+Plug 'ggreer/the_silver_searcher'
 
 " Automatically clear search highlights after you move your cursor.
 Plug 'haya14busa/is.vim'
@@ -65,7 +66,6 @@ nmap <leader>j :wincmd j<CR>
 nmap <leader>k :wincmd k<CR>
 nmap <leader>l :wincmd l<CR>
 nnoremap <Leader>gt :GoDef<Enter>
-nnoremap <Leader>nt :NERDTreeToggle<Enter>
 nnoremap <silent> <Leader>nf :NERDTreeFind<CR>
 
 " function to toggle number mode
@@ -86,7 +86,6 @@ let g:coc_disable_startup_warning = 1
 map <C-n> :NERDTreeToggle<CR>
 
 "Mode Settings
-
 let &t_SI.="\e[5 q" "SI = INSERT mode
 let &t_SR.="\e[4 q" "SR = REPLACE mode
 let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
@@ -161,6 +160,9 @@ nmap <Leader>w> :vertical res +10<CR>
 nmap <Leader>w< :vertical res -10<CR>
 
 nmap <Leader>ed :edit<CR>
+
+" for Ag file search - use :Ag for search
+let g:agprg='ag --column'
 
 " colors
 nmap <silent> <Leader>col1 :colorscheme gruvbox<CR>
