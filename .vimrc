@@ -83,7 +83,6 @@ endfunc
 nnoremap <f1> :call g:ToggleNuMode()<cr>
 
 let g:coc_disable_startup_warning = 1
-map <C-n> :NERDTreeToggle<CR>
 
 "Mode Settings
 let &t_SI.="\e[5 q" "SI = INSERT mode
@@ -96,7 +95,9 @@ nmap <leader>k :wincmd k<CR>
 nmap <leader>l :wincmd l<CR>
 nnoremap <Leader>gd :GoDef<Enter>
 nnoremap <Leader>pt :NERDTreeToggle<Enter>
-nnoremap <silent> <Leader>pv :NERDTreeFind<CR>
+" nnoremap <silent> <Leader>pv :NERDTreeFind<CR>
+nnoremap <silent> <Leader>nt :NERDTreeToggle<CR>
+map <C-n> :NERDTreeFind<CR>
 " enable NERDTree line numbers
 let NERDTreeShowLineNumbers=1
 " make sure relative line numbers are used
