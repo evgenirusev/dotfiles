@@ -86,8 +86,8 @@ nmap <leader>h :wincmd h<CR>
 nmap <leader>j :wincmd j<CR>
 nmap <leader>k :wincmd k<CR>
 nmap <leader>l :wincmd l<CR>
-nnoremap <silent> <Leader>nt :NERDTreeToggle<CR>
-map <C-n> :NERDTreeFind<CR>
+nnoremap <Leader>n :NERDTreeFind<CR>
+nnoremap <C-n> :NERDTreeToggle<CR>
 " enable NERDTree line numbers
 let NERDTreeShowLineNumbers=1
 " make sure relative line numbers are used
