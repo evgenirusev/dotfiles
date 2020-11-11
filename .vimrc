@@ -61,13 +61,6 @@ set clipboard=unnamedplus
 nnoremap <Leader>o o<Esc>
 nnoremap <Leader>O O<Esc>
 
-nmap <leader>h :wincmd h<CR>
-nmap <leader>j :wincmd j<CR>
-nmap <leader>k :wincmd k<CR>
-nmap <leader>l :wincmd l<CR>
-nnoremap <Leader>gt :GoDef<Enter>
-nnoremap <silent> <Leader>nf :NERDTreeFind<CR>
-
 " function to toggle number mode
 function! g:ToggleNuMode()
     if(&number == 1)
@@ -93,9 +86,6 @@ nmap <leader>h :wincmd h<CR>
 nmap <leader>j :wincmd j<CR>
 nmap <leader>k :wincmd k<CR>
 nmap <leader>l :wincmd l<CR>
-nnoremap <Leader>gd :GoDef<Enter>
-nnoremap <Leader>pt :NERDTreeToggle<Enter>
-" nnoremap <silent> <Leader>pv :NERDTreeFind<CR>
 nnoremap <silent> <Leader>nt :NERDTreeToggle<CR>
 map <C-n> :NERDTreeFind<CR>
 " enable NERDTree line numbers
