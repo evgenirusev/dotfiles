@@ -102,17 +102,20 @@ nnoremap <Leader>v <c-v>
 " r - replace all
 " rc - manually pick which onces you would like to replace
 nnoremap <Leader>r :%s///g<Left><Left>
-nnoremap <Leader>rc :%s///gc<Left><Left><Left>
+nnoremap <Leader>rf :%s///gc<Left><Left><Left>
 
 " The same as above but instead of acting on the whole file it will be
 " " restricted to the previously visually selected range. You can do that by
 " " pressing *, visually selecting the range you want it to apply to and then
 " " press a key below to replace all instances of it in the current selection.
 xnoremap <Leader>r :s///g<Left><Left>
-xnoremap <Leader>rc :s///gc<Left><Left><Left>
+xnoremap <Leader>rf :s///gc<Left><Left><Left>
 
 nnoremap <Leader>re :let @/='\<'.expand('<cword>').'\>'<CR>cgn
 xnoremap <Leader>re "sy:let @/=@s<CR>cgn
+
+" Clear search highlights.
+map <Leader>rc :let @/=''<CR>
 " --------------- Search and Replace End ----------------
 
 " GFiles instead of Files in order to ignore node_modules
