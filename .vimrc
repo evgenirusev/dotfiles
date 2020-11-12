@@ -96,8 +96,11 @@ autocmd FileType nerdtree setlocal relativenumber
 " workaround for wsl <c-v> paste
 nnoremap <Leader>v <c-v>
 
+" --------------- Search and Replace Start ----------------
 " Press * to search for the term under the cursor or a visual selection and
 " " then press a key below to replace all instances of it in the current file.
+" r - replace all
+" rc - manually pick which onces you would like to replace
 nnoremap <Leader>r :%s///g<Left><Left>
 nnoremap <Leader>rc :%s///gc<Left><Left><Left>
 
@@ -108,8 +111,9 @@ nnoremap <Leader>rc :%s///gc<Left><Left><Left>
 xnoremap <Leader>r :s///g<Left><Left>
 xnoremap <Leader>rc :s///gc<Left><Left><Left>
 
-nnoremap <silent> s* :let @/='\<'.expand('<cword>').'\>'<CR>cgn
-xnoremap <silent> s* "sy:let @/=@s<CR>cgn
+nnoremap <Leader>re :let @/='\<'.expand('<cword>').'\>'<CR>cgn
+xnoremap <Leader>re "sy:let @/=@s<CR>cgn
+" --------------- Search and Replace End ----------------
 
 " GFiles instead of Files in order to ignore node_modules
 nnoremap <silent> <C-p> :GFiles<CR>
