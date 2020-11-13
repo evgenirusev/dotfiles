@@ -32,7 +32,7 @@ alias nt="npm test"
 
 # general aliases
 alias v="vim"
-alias e="start ."
+alias ex="explorer.exe ."
 alias cmd="cmd.exe"	
 alias deldir="rm -rf $*"
 
