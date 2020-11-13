@@ -39,6 +39,9 @@ alias deldir="rm -rf $*"
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 
+# dotnet
+alias dt="dotnet.exe"
+
 # fs aliases
 wslPath="/mnt/c/Users/zupso/dev"
 alias ds="cd $wslPath/javascript-data-structures-and-algorithms"
