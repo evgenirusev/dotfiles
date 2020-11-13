@@ -40,7 +40,7 @@ alias deldir="rm -rf $*"
 alias sudo='sudo '
 
 # dotnet
-alias dt="dotnet.exe"
+alias dn="dotnet.exe"
 
 # fs aliases
 wslPath="/mnt/c/Users/zupso/dev"
