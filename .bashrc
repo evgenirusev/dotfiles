@@ -7,6 +7,7 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 alias ~="cd ~"
 alias -- -="cd -"
+alias c=cd
 
 # git aliases
 alias gco="git commit -m"
