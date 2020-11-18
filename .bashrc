@@ -37,6 +37,9 @@ alias ex="explorer.exe ."
 alias cmd="cmd.exe"	
 alias deldir="rm -rf $*"
 
+# microservices tech aliases
+alias consul="consul.exe"
+
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
 
