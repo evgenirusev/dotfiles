@@ -39,6 +39,7 @@ alias deldir="rm -rf $*"
 
 # microservices tech aliases
 alias consul="consul.exe"
+alias docker="docker.exe"
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
