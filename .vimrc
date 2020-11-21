@@ -75,8 +75,6 @@ endfunc
 " map the above function to F1
 nnoremap <f1> :call g:ToggleNuMode()<cr>
 
-let g:coc_disable_startup_warning = 1
-
 "Mode Settings
 let &t_SI.="\e[5 q" "SI = INSERT mode
 let &t_SR.="\e[4 q" "SR = REPLACE mode
