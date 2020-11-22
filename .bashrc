@@ -37,9 +37,10 @@ alias ex="explorer.exe ."
 alias cmd="cmd.exe"	
 alias deldir="rm -rf $*"
 
-# microservices tech aliases
-alias consul="consul.exe"
-alias docker="docker.exe"
+# microservices
+alias wconsul="consul.exe"
+alias wdocker="docker.exe"
+alias wvagrant="vagrant.exe"
 
 # Enable aliases to be sudo’ed
 alias sudo='sudo '
