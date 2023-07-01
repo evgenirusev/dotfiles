@@ -1,17 +1,17 @@
 # nav aliases
-alias ..="cd .."
+#alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 alias .....="cd ../../../.."
-alias ~="cd ~"
-alias -- -="cd -"
-alias c=cd
+#alias ~="cd ~"
+#alias -- -="cd -"
+#alias c=cd
 
 # git aliases
 alias gco="git commit -m"
 alias gs="git status"
 alias gc="git checkout $*"
-alias ga="git add ."
+alias ga="git add"
 alias gr="git reset --hard"
 alias grc="git reset --soft HEAD^"
 alias gcl="git clean -fdx"
@@ -44,48 +44,27 @@ alias ds="cd $wslPath/javascript-data-structures-and-algorithms"
 alias nodejs="vim $wslPath/nodejs/index.js"
 alias nodejsres="node $wslPath/nodejs/index.js"
 alias dev="cd $wslPath"
-alias cpr="cd $wslPath/cp"
-alias dotfiles="cd $wslPath/dotfiles"
+alias dotfiles="cd ~/dev/dotfiles"
 alias ma1="vim $wslPath/cp/competitive-programming/codeforces/main.cpp"
 alias ma2="vim $wslPath/cp/sandbox/main2.cpp"
 alias ma3="vim $wslPath/cp/sandbox/main3.cpp"
 alias codeforces="cd $wslPath/cp/competitive-programming/codeforces"
 alias aut="cd $wslPath/scripts-automation-generator"
 
-# utils
-function saveDotfiles() {
-    local path="~/dotfiles"
-
-    dotfiles
-    rm "$path/.zshrc"
-    rm "$path/.tmux.conf"
-    rm "$path/.vimrc"
-
-    cp ~/.zshrc $path
-    cp ~/.vimrc $path
-    cp ~/.tmux.conf $path
-
-    git --git-dir ~/dotfiles/.git add .
-    git --git-dir ~/dotfiles/.git commit -m "update dotfiles"
-    git --git-dir ~/dotfiles/.git push
-
-    cd -
-}
-
 function so() {
     source ~/.zshrc
     #tmux source-file ~/.tmux.conf
 }
 
-function pushSol() {
-    cd "$wslPath/cp/competitive-programming/codeforces"
-    mv main.cpp "$1.cpp"
-    git add .
-    git commit -m "add $1"
-    git push
-    createMain
-    cd -
-}
+#function pushSol() {
+#    cd "$wslPath/cp/competitive-programming/codeforces"
+#    mv main.cpp "$1.cpp"
+#    git add .
+#    git commit -m "add $1"
+#    git push
+#    createMain
+#    cd -
+#}
 
 function gen() {
     TMPFILE=`mktemp tmp.XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX` &&  echo $TMPFIL
@@ -94,17 +73,9 @@ function gen() {
 }
 
 # some more ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
-
-
-
-
-
-
-
-
+#alias ll='ls -alF'
+#alias la='ls -A'
+#alias l='ls -CF'
 
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -202,8 +173,7 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='vim'
 # else
 #   export EDITOR='mvim'
-# fi
-
+#
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
